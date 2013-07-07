@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="36" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ground" tilewidth="32" tileheight="32">
+  <image source="map/groundCompiled.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="7" name="lab" tilewidth="32" tileheight="32">
+  <image source="map/lab.png" width="384" height="256"/>
+ </tileset>
+ <tileset firstgid="103" name="objects" tilewidth="32" tileheight="32">
+  <image source="map/objects.png" width="288" height="64"/>
+ </tileset>
+ <tileset firstgid="121" name="house" tilewidth="32" tileheight="32">
+  <image source="map/house.png" width="256" height="192"/>
+ </tileset>
+ <tileset firstgid="169" name="triggers" tilewidth="32" tileheight="32">
+  <image source="map/triggers.png" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="playerStart" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="background" width="40" height="36">
+  <data encoding="base64" compression="zlib">
+   eJztl0sOgCAMRBHvf2c3mhDS2u9AFywmhl99jqXo1Vq7CN2vqLG/+ZyscbLmofmkuEc6VfGT4/j6+9Sf1Z6v3HyJD+lNJ3is/nHPpbn3X1vi/Nqa99uZGBaPNOup8Ww+yofI+lX+edYh+cb96eHT+ueNmyWuzqHrn7Y9+tSZ/gr+Sf27fLTm37xfovs76p9Uz7IZK52/yPyz+uD10epf9LsenX8S3+78q+afl29X/nnuE9GK/w8kX3Y+Wf1edf6i+Kz7k4uv1eE7fJl86PpSlY/jRNU9r6rxPdyCDco=
+  </data>
+ </layer>
+ <layer name="foreground" width="40" height="36">
+  <data encoding="base64" compression="zlib">
+   eJzt2PlTD3Ecx/F+KCkdKh2iQ+m+EKl0H4hS0UGRJMrVOKIJ0UXoICUhciT+zJ6/7Ex2vvvZz3d3P6WZ73vmMe+Z3e/nvZ95zc7nO7NeXq6rB70G90S/v4O+dd3qHLO6i3tuzNV+/wgD67rVOVpp+3WqG+VntWv7daob5We1u/t+bFTp8/vfSja/QTzGEzzFEJ7hOYYlnmN1vWx+IxjFGMbxAi8xgVcS+7O6Xja/13iDSUxhGjN4i3cS+7O6Xja/WbzHHObxAQv4iEWJ/Vldb5bfLdzGJ3zGFyzhK75hGd8F8+2uN8uvHw/xAz/xCyv4jVX8wV/BfLvrPeefvfLkZ69U5eeL7fCDP3YgAIEIQjB2IgShgjmq8gvDLoQjApGIwm5EYw/2Igaxgjmy+d3ATRddO9/0FYd47EMCErEfSUhGClKRhnTBc2Xzu48HLrp2vukrA5nIQjZycAAHcQi5OIwjyBM8V9X7dxT5KEAhjqEIxShBKcpQjgrBHFXvXyWqUI3jOIGTqMEpnEYt6nBGMEdVfvVoQCPO4hya0IwWtOI8LqBNMEdVfu24iEvowGV04gq6cBXduIbrgjme/w97pSo/s/NSf92oVOVndl7qrxuVbH4+JlSVbH7egnvbHN3RvyWb32btz5Ofvdpq+RnlaLY/p78fmn3/c3d/Tn8/1Pc1NvfWTw==
+  </data>
+ </layer>
+ <layer name="triggers" width="40" height="36" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztzrENADAIwDD+/4SWI8sFXWGwpeyJAAC2yu5MT3zcrqYnAAAAWOsByHICqw==
+  </data>
+ </layer>
+</map>
