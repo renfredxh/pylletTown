@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="40" height="36" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="ground" tilewidth="32" tileheight="32">
-  <image source="map/groundCompiled.png" width="192" height="32"/>
+  <image source="tiles/groundCompiled.png" width="192" height="32"/>
  </tileset>
  <tileset firstgid="7" name="lab" tilewidth="32" tileheight="32">
-  <image source="map/lab.png" width="384" height="256"/>
+  <image source="tiles/lab.png" width="384" height="256"/>
  </tileset>
  <tileset firstgid="103" name="objects" tilewidth="32" tileheight="32">
-  <image source="map/objects.png" width="288" height="64"/>
+  <image source="tiles/objects.png" width="288" height="64"/>
  </tileset>
  <tileset firstgid="121" name="house" tilewidth="32" tileheight="32">
-  <image source="map/house.png" width="256" height="192"/>
+  <image source="tiles/house.png" width="256" height="192"/>
  </tileset>
  <tileset firstgid="169" name="triggers" tilewidth="32" tileheight="32">
-  <image source="map/triggers.png" width="64" height="64"/>
+  <image source="tiles/triggers.png" width="64" height="64"/>
   <tile id="0">
    <properties>
     <property name="playerStart" value=""/>
