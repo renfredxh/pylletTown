@@ -11,6 +11,7 @@ class Player(pygame.sprite.Sprite):
 		self.holdTime = 0
 		self.walking = False
 		self.dx = 0
+		self.step = 'rightFoot'
 		
 	def setSprite(self):
 		# Resets the player sprite sheet to its default position 
@@ -54,6 +55,7 @@ class Player(pygame.sprite.Sprite):
 				self.holdTime += dt
 		else:
 			self.holdTime = 0
+			self.step = 'rightFoot'
 		# Walking mode enabled if a button is held for 0.1 seconds
 		if self.holdTime >= 100:
 			self.walking = True
@@ -71,7 +73,19 @@ class Player(pygame.sprite.Sprite):
 			elif self.orient == 'right':
 				self.rect.x += 8
 				self.dx += 8
-			self.image.scroll(-64, 0)
+			pygame.transform.flip(self.image, True, True)
+		# Switch to the walking sprite after 32 pixels 
+		if self.dx == 32:
+			# Self.step keeps track of when to flip the sprite so that
+			# the character appears to be taking steps with different feet.
+			if (self.orient == 'up' or 
+				self.orient == 'down') and self.step == 'leftFoot':
+				self.image = pygame.transform.flip(self.image, True, False)
+				self.step = 'rightFoot'
+			else:
+				self.image.scroll(-64, 0)
+				self.step = 'leftFoot'
+		# After traversing 64 pixels, the walking animation is done
 		if self.dx == 64:
 			self.walking = False
 			self.setSprite()	
