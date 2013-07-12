@@ -5,6 +5,31 @@
  </tileset>
  <tileset firstgid="7" name="lab" tilewidth="32" tileheight="32">
   <image source="tiles/lab.png" width="384" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="103" name="objects" tilewidth="32" tileheight="32">
   <image source="tiles/objects.png" width="288" height="64"/>
@@ -13,10 +38,30 @@
   <image source="tiles/house.png" width="256" height="192"/>
  </tileset>
  <tileset firstgid="169" name="triggers" tilewidth="32" tileheight="32">
-  <image source="tiles/triggers.png" width="64" height="64"/>
+  <image source="tiles/triggers.png" width="192" height="64"/>
   <tile id="0">
    <properties>
     <property name="playerStart" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value=""/>
    </properties>
   </tile>
  </tileset>
@@ -32,7 +77,7 @@
  </layer>
  <layer name="triggers" width="40" height="36" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztzrENADAIwDD+/4SWI8sFXWGwpeyJAAC2yu5MT3zcrqYnAAAAWOsByHICqw==
+   eJztmNEOgzAIRf3/P5lzbjo/cLz0YY1XoBTqAychTWypcIOlcZrOeZGtYO5qPRq1+3B8yY4B8dXv5fbNUTbejRKXts6ikOpn1b3VX6pfmUcjR6t/6mfz5/Ko559ki8Cvtz/Ko85zI9tPniOs/to6epDNgnW90J5/b7KPa0T/ZP+w4aVfr77vpR933o3uH9H6afOP1k9L1p8Nad+9i36o747SrxfZP/L7LetQ7p51q+kfCM+61eiHSP1Sv1Y09zlExH81yX0OcQTE9wMzPXXj
   </data>
  </layer>
 </map>
