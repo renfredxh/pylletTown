@@ -59,21 +59,24 @@ class Player(pygame.sprite.Sprite):
 		# Walking mode enabled if a button is held for 0.1 seconds
 		if self.holdTime >= 100:
 			self.walking = True
+		lastRect = self.rect.copy()
 		# Walking at 8 pixels per frame in the direction the player is facing 
 		if self.walking and self.dx < 64:
 			if self.orient == 'up':
 				self.rect.y -= 8
-				self.dx += 8
 			elif self.orient == 'down':
 				self.rect.y += 8
-				self.dx += 8
 			elif self.orient == 'left':
 				self.rect.x -= 8
-				self.dx += 8
 			elif self.orient == 'right':
 				self.rect.x += 8
-				self.dx += 8
-			pygame.transform.flip(self.image, True, True)
+			self.dx += 8
+		# Collision detection. Reset to the previous rectangle if player
+		# collides with anything in the foreground layer
+		if len(game.tilemap.layers['triggers'].collide(self.rect, 
+														'solid')) > 0:
+			
+			self.rect = lastRect
 		# Switch to the walking sprite after 32 pixels 
 		if self.dx == 32:
 			# Self.step keeps track of when to flip the sprite so that
