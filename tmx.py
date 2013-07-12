@@ -170,11 +170,11 @@ class Cell(object):
 		'''
 		if self.px + self.tile.tile_width < other.x:
 			return False
-		if other.x + other.width < self.px:
+		if other.x + other.width - 1 < self.px:
 			return False
 		if self.py + self.tile.tile_height < other.y:
 			return False
-		if other.y + other.height < self.py:
+		if other.y + other.height - 1 < self.py:
 			return False
 		return True
 
