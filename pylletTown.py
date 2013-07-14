@@ -150,6 +150,7 @@ class Game(object):
 		try:
 			for cell in self.tilemap.layers['sprites'].find('src'):
 				SpriteLoop((cell.px,cell.py), cell, self.objects)
+		# In case there is no sprite layer for the current map
 		except KeyError:
 			pass
 		else:
