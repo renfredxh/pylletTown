@@ -173,7 +173,7 @@ class Game(object):
 					return
 
 			self.tilemap.update(dt, self)
-			screen.fill((255,255,255))
+			screen.fill((0,0,0))
 			self.tilemap.draw(screen)
 			pygame.display.flip()
 
