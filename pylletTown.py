@@ -4,7 +4,7 @@ import tmx
 class Player(pygame.sprite.Sprite):
 	def __init__(self, location, *groups):
 		super(Player, self).__init__(*groups)
-		self.image = pygame.image.load('tiles/player.png')
+		self.image = pygame.image.load('sprites/player.png')
 		self.imageDefault = self.image.copy()
 		self.rect = pygame.Rect(location, (64,64))
 		self.orient = 'down' 

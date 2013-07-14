@@ -59,16 +59,6 @@
     <property name="water" value=""/>
    </properties>
   </tile>
-  <tile id="8">
-   <properties>
-    <property name="flower" value=""/>
-   </properties>
-  </tile>
-  <tile id="9">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
   <tile id="10">
    <properties>
     <property name="solid" value=""/>
@@ -81,8 +71,8 @@
    <properties>
     <property name="frames" value="8"/>
     <property name="height" value="32"/>
-    <property name="mspf" value="800"/>
-    <property name="src" value="tiles/water.png"/>
+    <property name="mspf" value="350"/>
+    <property name="src" value="sprites/water.png"/>
     <property name="width" value="32"/>
    </properties>
   </tile>
@@ -90,8 +80,8 @@
    <properties>
     <property name="frames" value="4"/>
     <property name="height" value="32"/>
-    <property name="mspf" value="400"/>
-    <property name="src" value="tiles/flower.png"/>
+    <property name="mspf" value="350"/>
+    <property name="src" value="sprites/flower.png"/>
     <property name="width" value="32"/>
    </properties>
   </tile>
@@ -106,14 +96,14 @@
    eJzt2PlTD3Ecx/F+KCkdKh2iQ+m+EKl0H4hS0UGRJMrVOKIJ0UXoICUhciT+zJ6/7Ex2vvvZz3d3P6WZ73vmMe+Z3e/nvZ95zc7nO7NeXq6rB70G90S/v4O+dd3qHLO6i3tuzNV+/wgD67rVOVpp+3WqG+VntWv7daob5We1u/t+bFTp8/vfSja/QTzGEzzFEJ7hOYYlnmN1vWx+IxjFGMbxAi8xgVcS+7O6Xja/13iDSUxhGjN4i3cS+7O6Xja/WbzHHObxAQv4iEWJ/Vldb5bfLdzGJ3zGFyzhK75hGd8F8+2uN8uvHw/xAz/xCyv4jVX8wV/BfLvrPeefvfLkZ69U5eeL7fCDP3YgAIEIQjB2IgShgjmq8gvDLoQjApGIwm5EYw/2Igaxgjmy+d3ATRddO9/0FYd47EMCErEfSUhGClKRhnTBc2Xzu48HLrp2vukrA5nIQjZycAAHcQi5OIwjyBM8V9X7dxT5KEAhjqEIxShBKcpQjgrBHFXvXyWqUI3jOIGTqMEpnEYt6nBGMEdVfvVoQCPO4hya0IwWtOI8LqBNMEdVfu24iEvowGV04gq6cBXduIbrgjme/w97pSo/s/NSf92oVOVndl7qrxuVbH4+JlSVbH7egnvbHN3RvyWb32btz5Ofvdpq+RnlaLY/p78fmn3/c3d/Tn8/1Pc1NvfWTw==
   </data>
  </layer>
- <layer name="sprites" width="40" height="36">
+ <layer name="sprites" width="40" height="36" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt1NEJACAIQEH33ydarwmkIsiCOxB/H34YAQAAwKo+2ZVebgP+15LJ3P5JO30V/3L3frfpO6MvNwD0GCkj
   </data>
  </layer>
  <layer name="triggers" width="40" height="36" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztmFkKxDAIhnv/m8y+D3RON77kYUKsWrcO+IMITUz1I6kl0zTWCeyMjC3Nx7x0HUoPsGdCfv17qXWzfcs3Ow8r/lHq+W1NXH5a7mvjufzaOOYprY0vfrp4qo5+/AB2ZMRZx2N19HXewO6D55i08dJ9tAPbM+ZZSfr9u4BdXTP6VfUPnbz4WfV9L37U9y67f0Tzk9YfzU+q2n86cfvuVvhhfTeLn5Wqf9T5bfOw2j33raR/vMDeAx+RH4ffDPYZeM9zVfxs8vsXfkse4xdxr8b5n8P4RdwbfgEEH5au
+   eJztmFkOxSAIRbv/nbx5XODjx49negXKYJtwEkJSxcKNlsZlWedGdgdjo/nIa9fh+JB9J+TXv5dbd7Zv+c7Ow0v/LHr99oZUP6vuW+Ol+rVx5Dm2xpd+tniujn78QnYVxHnHozr6Ol9k75XnCGu8dh+dyM6CeV5ov38PsmdoRv9U/7ARpZ9X34/Sj/veze4f2fpp68/WT0vtPxvSvrsX/VDfnaWfF9U/6vy2eaj2yH2r6R+IjPwk+iEiz1XpZ+No+o38KL/oezXJ/xwi497wB0FheJ8=
   </data>
  </layer>
 </map>
