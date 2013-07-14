@@ -75,7 +75,6 @@ class Player(pygame.sprite.Sprite):
 		# collides with anything in the foreground layer
 		if len(game.tilemap.layers['triggers'].collide(self.rect, 
 														'solid')) > 0:
-			
 			self.rect = lastRect
 		# Switch to the walking sprite after 32 pixels 
 		if self.dx == 32:
@@ -135,9 +134,9 @@ class SpriteLoop(pygame.sprite.Sprite):
 				self.frameCount = 0
 		
 class Game(object):
-	def main(self, screen):
-		clock = pygame.time.Clock()
-		self.tilemap = tmx.load('palletTown.tmx', screen.get_size())
+	def initArea(self, mapFile):
+		"""Load maps and initialize sprite layers for each new area"""
+		self.tilemap = tmx.load(mapFile, screen.get_size())
 		self.players = tmx.SpriteLayer()
 		self.objects = tmx.SpriteLayer()
 		# Initializing other animated sprites
@@ -146,10 +145,14 @@ class Game(object):
 		# Initializing player sprite
 		start_cell = self.tilemap.layers['triggers'].find('playerStart')[0]
 		self.player = Player((start_cell.px, start_cell.py), self.players)	
-
+		
 		self.tilemap.layers.append(self.objects)
 		self.tilemap.layers.append(self.players)	
 			
+	def main(self, screen):
+		clock = pygame.time.Clock()
+		self.initArea('palletTown.tmx')
+		
 		while 1:
 			dt = clock.tick(30)
 
