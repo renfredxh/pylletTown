@@ -83,6 +83,7 @@ class Player(pygame.sprite.Sprite):
 		elif len(game.tilemap.layers['triggers'].collide(self.rect, 
 														'entry')) > 0:
 			entryCell = game.tilemap.layers['triggers'].find('entry')[0]
+			game.fadeOut()
 			game.initArea(entryCell['entry'])
 			
 			return
@@ -146,6 +147,21 @@ class Game(object):
 	def __init__(self, screen):
 		self.screen = screen
 	
+	def fadeOut(self):
+		"""Animate the screen fading to black for entering a new area"""
+		clock = pygame.time.Clock()
+		# Fade the screen to black and then flash white for one frame
+		# Note: this process could be threaded in order to simultaneously
+		# load new map while fading out
+		for i in range(200,0,-40):
+			clock.tick(15)
+			self.tilemap.draw(self.screen)
+			screen.fill((i,i,i))
+			pygame.display.flip()
+		clock.tick(15)
+		screen.fill((255,255,255))
+		pygame.display.flip()
+		
 	def initArea(self, mapFile):
 		"""Load maps and initialize sprite layers for each new area"""
 		self.tilemap = tmx.load(mapFile, screen.get_size())
