@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="16" height="18" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="indoors" tilewidth="32" tileheight="32">
+  <image source="tiles/indoors.png" width="512" height="128"/>
+ </tileset>
+ <tileset firstgid="65" name="triggers" tilewidth="32" tileheight="32">
+  <image source="tiles/triggers.png" width="192" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="playerStart" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="entry" value="palletTown.tmx"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="entry" value="palletTown.tmx"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="background" width="16" height="18">
+  <data encoding="base64" compression="zlib">
+   eJzN0McKAkEQhOFZwexFwezFHNacs77/U/kfPBQLur1e1oGPovvQBeM55xLw3plECmlkDHMRJckyKqiiZpjb6Ej2McAQI5mDucASK6wld9jjgKPMwXzg+eW+NT/dt+a/9c8wRxY55FGQfVj/DXfU0UATLdlb+8eYwMf0h/4TzrjgGqE/7v/voicZtX+DrWRYf9zvBX2BKUk=
+  </data>
+ </layer>
+ <layer name="triggers" width="16" height="18" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxzZWBgcANiVzJpbyD2oYBGNw8G0Pm4ALp56OKjgDyAK16IBbjiZajYP1DAEYidKNDvDsQeFOh3BmIXJJpU4AnEXkg0IQAAG8IURQ==
+  </data>
+ </layer>
+</map>
