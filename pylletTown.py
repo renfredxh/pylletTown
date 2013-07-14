@@ -2,16 +2,18 @@ import pygame
 import tmx
 
 class Player(pygame.sprite.Sprite):
-	def __init__(self, location, *groups):
+	def __init__(self, location, orientation, *groups):
 		super(Player, self).__init__(*groups)
 		self.image = pygame.image.load('sprites/player.png')
 		self.imageDefault = self.image.copy()
 		self.rect = pygame.Rect(location, (64,64))
-		self.orient = 'down' 
+		self.orient = orientation 
 		self.holdTime = 0
 		self.walking = False
 		self.dx = 0
 		self.step = 'rightFoot'
+		# Set default orientation
+		self.setSprite()
 		
 	def setSprite(self):
 		# Resets the player sprite sheet to its default position 
@@ -156,8 +158,9 @@ class Game(object):
 		else:
 			self.tilemap.layers.append(self.objects)
 		# Initializing player sprite
-		start_cell = self.tilemap.layers['triggers'].find('playerStart')[0]
-		self.player = Player((start_cell.px, start_cell.py), self.players)
+		startCell = self.tilemap.layers['triggers'].find('playerStart')[0]
+		self.player = Player((startCell.px, startCell.py), 
+							 startCell['playerStart'], self.players)
 		self.tilemap.layers.append(self.players)	
 			
 	def main(self, screen):
