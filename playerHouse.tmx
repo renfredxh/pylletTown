@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="16" height="18" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="18" height="18" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="indoors" tilewidth="32" tileheight="32">
   <image source="tiles/indoors.png" width="512" height="128"/>
  </tileset>
@@ -41,14 +41,14 @@
    </properties>
   </tile>
  </tileset>
- <layer name="background" width="16" height="18">
+ <layer name="background" width="18" height="18">
   <data encoding="base64" compression="zlib">
-   eJzN0McKAkEQhOFZwexFwezFHNacs77/U/kfPBQLur1e1oGPovvQBeM55xLw3plECmlkDHMRJckyKqiiZpjb6Ej2McAQI5mDucASK6wld9jjgKPMwXzg+eW+NT/dt+a/9c8wRxY55FGQfVj/DXfU0UATLdlb+8eYwMf0h/4TzrjgGqE/7v/voicZtX+DrWRYf9zvBX2BKUk=
+   eJzV0ccKAkEQhOFRMHtRMHsx55yz7/9U/peBYmGhXS9rw0fRc5gpGOecSyApmUIaGWQNu58SypIVVFFD3bD76aArOcAQI4xlD+YKa7lng63kAUeccJY9mC+85Z6w96zpJ+w9a/5LnwWWyCGPAopybu3zwBMNNNFCW86/7TPBFDPMf+hzwRU33CP0idt/9dCXjNpnh72ktU+c5gNkhSlJ
   </data>
  </layer>
- <layer name="triggers" width="16" height="18" visible="0">
+ <layer name="triggers" width="18" height="18" visible="0">
   <data encoding="base64" compression="zlib">
-   eJxzZWBgcANiVzJpbyD2oYBGNw8G0Pm4ALp56OKjgDyAK16IBbjiZajYP1DAEYidKNDvDsQeFOh3BmIXJJpU4AnEXkg0IQAAG8IURQ==
+   eJxzZWBgcAViNwpoEPaGYh8KaB+omejmwwA6HxfA5R4YQOfjAjD3UApg7qEUDDX34IpHUt2DKx6HunuIBbSOL0cgdqKCe9yB2INE9zAwYIanMxC7INGEyg1cwBOIvZBoYgAAy+Ag3w==
   </data>
  </layer>
 </map>
