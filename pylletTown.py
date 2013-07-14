@@ -84,7 +84,7 @@ class Player(pygame.sprite.Sprite):
 														'entry')) > 0:
 			entryCell = game.tilemap.layers['triggers'].find('entry')[0]
 			game.initArea(entryCell['entry'])
-			game.tilemap.set_focus(self.rect.x, self.rect.y)
+			
 			return
 		# Switch to the walking sprite after 32 pixels 
 		if self.dx == 32:
@@ -164,7 +164,8 @@ class Game(object):
 		startCell = self.tilemap.layers['triggers'].find('playerStart')[0]
 		self.player = Player((startCell.px, startCell.py), 
 							 startCell['playerStart'], self.players)
-		self.tilemap.layers.append(self.players)	
+		self.tilemap.layers.append(self.players)
+		self.tilemap.set_focus(self.player.rect.x, self.player.rect.y)	
 			
 	def main(self):
 		clock = pygame.time.Clock()
