@@ -71,11 +71,19 @@ class Player(pygame.sprite.Sprite):
 			elif self.orient == 'right':
 				self.rect.x += 8
 			self.dx += 8
-		# Collision detection. Reset to the previous rectangle if player
-		# collides with anything in the foreground layer
+		# Collision detection:
+		# Reset to the previous rectangle if player collides
+		# with anything in the foreground layer
 		if len(game.tilemap.layers['triggers'].collide(self.rect, 
 														'solid')) > 0:
 			self.rect = lastRect
+		# 
+		elif len(game.tilemap.layers['triggers'].collide(self.rect, 
+														'entry')) > 0:
+			entryCell = game.tilemap.layers['triggers'].find('entry')[0]
+			game.initArea(entryCell['entry'])
+			game.tilemap.set_focus(self.rect.x, self.rect.y)
+			return
 		# Switch to the walking sprite after 32 pixels 
 		if self.dx == 32:
 			# Self.step keeps track of when to flip the sprite so that
