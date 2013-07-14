@@ -128,7 +128,6 @@ class SpriteLoop(pygame.sprite.Sprite):
 		self.mspf = int(cell['mspf']) # milliseconds per frame
 		self.timeCount = 0
 
-		
 	def update(self, dt, game):
 		self.timeCount += dt
 		if self.timeCount > self.mspf:
@@ -148,13 +147,16 @@ class Game(object):
 		self.players = tmx.SpriteLayer()
 		self.objects = tmx.SpriteLayer()
 		# Initializing other animated sprites
-		for cell in self.tilemap.layers['sprites'].find('src'):
-			SpriteLoop((cell.px,cell.py), cell, self.objects)
+		try:
+			for cell in self.tilemap.layers['sprites'].find('src'):
+				SpriteLoop((cell.px,cell.py), cell, self.objects)
+		except KeyError:
+			pass
+		else:
+			self.tilemap.layers.append(self.objects)
 		# Initializing player sprite
 		start_cell = self.tilemap.layers['triggers'].find('playerStart')[0]
-		self.player = Player((start_cell.px, start_cell.py), self.players)	
-		
-		self.tilemap.layers.append(self.objects)
+		self.player = Player((start_cell.px, start_cell.py), self.players)
 		self.tilemap.layers.append(self.players)	
 			
 	def main(self, screen):
