@@ -77,7 +77,7 @@ class Player(pygame.sprite.Sprite):
 		if len(game.tilemap.layers['triggers'].collide(self.rect, 
 														'solid')) > 0:
 			self.rect = lastRect
-		# 
+		# Area entry detection:
 		elif len(game.tilemap.layers['triggers'].collide(self.rect, 
 														'entry')) > 0:
 			entryCell = game.tilemap.layers['triggers'].find('entry')[0]
