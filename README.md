@@ -5,3 +5,4 @@ pylletTown is a [TMX](https://github.com/bjorn/tiled/wiki/TMX-Map-Format) based 
 
 Installiation of the [pygame](http://www.pygame.org/install.html) is required to run this demo
 
+![alt tag](http://i.imgur.com/qbRg15W.png)
