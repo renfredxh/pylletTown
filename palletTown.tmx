@@ -44,6 +44,16 @@
     <property name="playerStart" value=""/>
    </properties>
   </tile>
+  <tile id="2">
+   <properties>
+    <property name="entry" value="playerHouse.tmx"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="entry" value="playerHouse.tmx"/>
+   </properties>
+  </tile>
   <tile id="4">
    <properties>
     <property name="solid" value=""/>
