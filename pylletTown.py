@@ -143,6 +143,9 @@ class SpriteLoop(pygame.sprite.Sprite):
 				self.frameCount = 0
 		
 class Game(object):
+	def __init__(self, screen):
+		self.screen = screen
+	
 	def initArea(self, mapFile):
 		"""Load maps and initialize sprite layers for each new area"""
 		self.tilemap = tmx.load(mapFile, screen.get_size())
@@ -163,7 +166,7 @@ class Game(object):
 							 startCell['playerStart'], self.players)
 		self.tilemap.layers.append(self.players)	
 			
-	def main(self, screen):
+	def main(self):
 		clock = pygame.time.Clock()
 		self.initArea('palletTown.tmx')
 		
@@ -178,11 +181,11 @@ class Game(object):
 
 			self.tilemap.update(dt, self)
 			screen.fill((0,0,0))
-			self.tilemap.draw(screen)
+			self.tilemap.draw(self.screen)
 			pygame.display.flip()
 
 if __name__ == '__main__':
 	pygame.init()
 	screen = pygame.display.set_mode((640, 480))
 	pygame.display.set_caption("Pyllet Town")
-	Game().main(screen)
+	Game(screen).main()
