@@ -150,16 +150,17 @@ class Game(object):
 	def fadeOut(self):
 		"""Animate the screen fading to black for entering a new area"""
 		clock = pygame.time.Clock()
-		# Fade the screen to black and then flash white for one frame
-		# Note: this process could be threaded in order to simultaneously
-		# load new map while fading out
-		for i in range(200,0,-40):
+		blackRect = pygame.Surface(self.screen.get_size())
+		blackRect.set_alpha(100)
+		blackRect.fill((0,0,0))
+		# Continuously draw a transparent black rectangle over the screen
+		# to create a fadeout effect
+		for i in range(0,5):
 			clock.tick(15)
-			self.tilemap.draw(self.screen)
-			screen.fill((i,i,i))
+			self.screen.blit(blackRect, (0,0))  
 			pygame.display.flip()
 		clock.tick(15)
-		screen.fill((255,255,255))
+		screen.fill((255,255,255,50))
 		pygame.display.flip()
 		
 	def initArea(self, mapFile):
