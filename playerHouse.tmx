@@ -7,7 +7,7 @@
   <image source="tiles/triggers.png" width="192" height="64"/>
   <tile id="0">
    <properties>
-    <property name="playerStart" value=""/>
+    <property name="playerStart" value="up"/>
    </properties>
   </tile>
   <tile id="4">
