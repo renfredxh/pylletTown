@@ -10,7 +10,7 @@ View a demo video here: http://youtu.be/KnOMXyqbxqY
 
 ![alt tag](http://i.imgur.com/kudkDNn.png)
 
-![alt tag](http://i.imgur.com/GBaHfkW.png)
+![alt tag](http://imgur.com/BG0gJ4g)
 
 ![alt tag](http://i.imgur.com/BfY1qzM.png)
 
